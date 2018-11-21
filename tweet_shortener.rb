@@ -16,14 +16,12 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  array = tweet.split(" ")
-  array.each do |word|
-    if word == dictionary.keys.any?
-      word = dictionary["word"]
+  array = tweet.split.collect do |word|
+    if dictionary.keys.any? { |w| w == word.downcase }
+      word = dictionary[word.downcase]
     else
       word
     end
-  #  binding.pry
   end
-  return array.join(" ")
+  array.join(" ")
 end
