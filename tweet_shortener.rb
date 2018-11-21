@@ -23,7 +23,7 @@ def word_substituter(tweet)
     else
       word
     end
-    binding.pry
+  #  binding.pry
   end
   return array.join(" ")
 end
