@@ -20,6 +20,7 @@ def word_substituter(tweet)
   array.each do |word|
     if word == dictionary.key?(word)
       word = dictionary["word"]
+      binding.pry
     else
       word
     end
